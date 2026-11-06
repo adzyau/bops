@@ -1710,7 +1710,9 @@ function BotSheet({
   const [presetOpen, setPresetOpen] = useState<string | null>(presetKey ?? null);
   // The keyboard comes to the sheet when it opens.
   const sheet = useRef<HTMLElement>(null);
-  useEffect(() => sheet.current?.focus(), []);
+  useEffect(() => {
+    sheet.current?.focus();
+  }, []);
   const chiefName = t.chief ? name(t.chief.id) : "";
   const lead = t.lead.get(b.id);
   const who = whoFor(t, state, b.id, people);

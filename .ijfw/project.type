@@ -1,0 +1,12 @@
+{
+  "type": "unknown",
+  "primary_type": "unknown",
+  "secondary_types": [],
+  "confidence": 0,
+  "scan_incomplete": false,
+  "detected_at": "2026-11-06T07:52:57.663Z",
+  "signals": [],
+  "fallback_reason": null,
+  "file_tree_hash": "827146ba7f8d453d",
+  "branch_hash": ""
+}

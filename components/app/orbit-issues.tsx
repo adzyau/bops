@@ -650,7 +650,9 @@ function TagPicker({
       window.removeEventListener("scroll", scrolled, true);
     };
   }, [anchor]);
-  useEffect(() => field.current?.focus({ preventScroll: true }), []);
+  useEffect(() => {
+    field.current?.focus({ preventScroll: true });
+  }, []);
   // The row the keys moved to stays in sight.
   useEffect(() => {
     if (!moved.current || at < 0) return;

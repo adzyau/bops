@@ -49,7 +49,9 @@ export function MemorySheet({ state, onClose }: { state: AppState; onClose: () =
   const reload = useCallback(() => setTick((t) => t + 1), []);
   // Brought into view as it opens, under the line that asked for it.
   const box = useRef<HTMLElement>(null);
-  useEffect(() => box.current?.scrollIntoView?.({ block: "nearest" }), []);
+  useEffect(() => {
+    box.current?.scrollIntoView?.({ block: "nearest" });
+  }, []);
 
   return (
       <section

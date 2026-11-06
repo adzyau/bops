@@ -523,7 +523,9 @@ export function AppPicker({ state, start, replaces, onClose }: { state: AppState
   }, [onClose]);
   // Brought into view as it opens, under the page's heading.
   const card = useRef<HTMLDivElement>(null);
-  useEffect(() => card.current?.scrollIntoView?.({ block: "nearest" }), []);
+  useEffect(() => {
+    card.current?.scrollIntoView?.({ block: "nearest" });
+  }, []);
   const info = chosen ? (apps?.find((a) => a.app === chosen) ?? { app: chosen, name: (state.accounts ?? []).find((a) => a.app === chosen)?.appName ?? chosen, tags: [], auth: "oauth" as const }) : null;
 
   return (
